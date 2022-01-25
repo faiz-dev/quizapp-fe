@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../dist/output.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="mx-auto h-128 w-[86rem] mt-20">
+            <div class="flex gap-5">
+                <div class="w-4/6">
+                    <div
+                        class="border border-black-200 rounded-xl shadow-lg bg-white p-5"
+                    >
+                        <header
+                            class="flex justify-between border-b-2 mb-5 items-center pb-2"
+                        >
+                            <h1 class="flex flex-col items-end">
+                                <span class="text-2xl font-bold text-slate-500"
+                                    >Soal 1</span
+                                >
+                                <span class="font-bold text-gray-500 italic"
+                                    >dari 6</span
+                                >
+                            </h1>
+                            <img
+                                src="./img/qlogo.png"
+                                class="mr-5 h-[4rem] aspect:square opacity-50"
+                                alt=""
+                            />
+                        </header>
+
+                        <main class="pl-5 pb-10 pt-5">
+                            <div
+                                id="soal"
+                                class="mb-10 leading-7 pr-10"
+                                style="min-height: 200px"
+                            >
+                                <b
+                                    >Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Officia laboriosam vero
+                                    ipsa aperiam eum explicabo non vel aliquam
+                                    tempora consectetur, tenetur eos?
+                                </b>
+                                <br />
+                                Expedita voluptates inventore aperiam quasi amet
+                                sed delectus. Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Officia laboriosam
+                                vero ipsa aperiam eum explicabo non vel aliquam
+                                tempora consectetur, tenetur eos? Expedita
+                                voluptates inventore aperiam quasi amet sed
+                                delectus. Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Officia laboriosam
+                                vero ipsa aperiam eum explicabo non vel aliquam
+                                tempora
+                            </div>
+
+                            <div class="flex flex-col gap-2 max-w-2xl">
+                                <button class="choice" data-key="a">
+                                    <span>A</span>
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Fugiat molestias hic
+                                        quae,
+                                    </span>
+                                </button>
+                                <button class="choice" data-key="b">
+                                    <span>B</span>
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Fugiat molestias hic
+                                        quae,
+                                    </span>
+                                </button>
+                                <button class="choice" data-key="c">
+                                    <span>C</span>
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Fugiat molestias hic
+                                        quae,
+                                    </span>
+                                </button>
+                                <button class="choice" data-key="d">
+                                    <span>D</span>
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.Fugiat molestias hic
+                                        quae, Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Fugiat
+                                        molestias hic quae, Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit.
+                                        Fugiat molestias hic quae,
+                                    </span>
+                                </button>
+                                <button class="choice" data-key="e">
+                                    <span>E</span>
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Fugiat molestias hic
+                                        quae,
+                                    </span>
+                                </button>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+                <div class="w-2/6" style="max-width: 320px">
+                    <div
+                        class="border border-black-200 shadow-lg bg-white p-5 mb-3"
+                    >
+                        <h3 class="font-bold mb-2 text-lg">Navigasi</h3>
+                        <div class="flex flex-wrap gap-x-2">
+                            <button class="nav-number">1</button>
+                            <button class="nav-number">2</button>
+                            <button class="nav-number">3</button>
+                            <button class="nav-number">4</button>
+                            <button class="nav-number">5</button>
+                            <button class="nav-number">6</button>
+                        </div>
+                    </div>
+                    <div
+                        class="border border-black-200 shadow-lg bg-white p-5 mb-3 flex justify-around"
+                    >
+                        <button
+                            class="bg-slate-500 px-5 py-2 shadow-lg text-white font-bold rounded"
+                        >
+                            Sebelumnya
+                        </button>
+                        <button
+                            class="bg-slate-500 px-5 py-2 shadow-lg text-white font-bold rounded"
+                        >
+                            Selanjutnya
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let choices = document.querySelectorAll('.choice')
+            function initChoice() {
+                for (choice of choices) {
+                    choice.addEventListener('click', function () {
+                        resetChoiceActive()
+                        this.classList.add('choice-active')
+                    })
+                }
+            }
+
+            function resetChoiceActive() {
+                for (choice of choices) {
+                    choice.classList.remove('choice-active')
+                }
+            }
+
+            initChoice()
+        </script>
+    </body>
+</html>

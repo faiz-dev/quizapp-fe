@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    /* @apply bg-cyan-50; */
+    font-family: 'Outfit', sans-serif;
+}
+main {
+    @apply bg-white;
+}
+.choice {
+    @apply flex 
+        border p-2 
+        gap-x-5
+        px-5 
+        rounded-lg 
+        shadow 
+        hover:bg-slate-600 
+        hover:text-white;
+}
+
+.choice-active {
+    @apply bg-slate-600 text-white;
+}
+.choice span {
+    @apply box-content text-left;
+}
+.nav-number {
+    @apply px-3 border-gray-300 border rounded py-1 text-gray-500 font-bold hover:bg-slate-500 hover:text-white;
+}
